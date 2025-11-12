@@ -2,8 +2,9 @@
 
 USERID=$(id -u)
 
-if($USERID -ne 0) then
-echo "ERROR: You can run with root access"
+if[ $USERID -ne 0 ]
+then
+echo "ERROR: please run with this root access"
 else
-echo "User is running with root access"
+echo "your is running with root access"
 fi
