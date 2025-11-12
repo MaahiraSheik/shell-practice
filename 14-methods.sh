@@ -11,6 +11,7 @@ echo "your is running with root access"
 fi
 
 VALIDATE(){
+    
 
 if [ $1 -eq 0 ] t
 then
