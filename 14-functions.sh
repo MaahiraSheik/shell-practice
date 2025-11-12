@@ -12,7 +12,7 @@ fi
 
 VALIDATE(){
 if [ $1 -eq 0 ] then
-echo "installing mysql $1....SUCCESS"
+echo "installing mysql $2....SUCCESS"
 else
 echo "Mysql not installed $2...FALURE"
 exit 1
