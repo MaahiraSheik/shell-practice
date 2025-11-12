@@ -24,6 +24,7 @@ exit 1
 fi
 else
 echo "mysql is already insatlalled..Nothing to do"
+
 fi
 
 # if [ $? -eq 0 ]
