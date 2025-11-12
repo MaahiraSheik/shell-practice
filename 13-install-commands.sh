@@ -11,7 +11,7 @@ echo "your is running with root access"
 fi
 
 dnf list installed mysql
-if[ $? -ne 0 ]
+if [ $? -ne 0 ]
 then 
 echo " mysql is not insatlled...going to insatll"
 dnf install mysql -y
