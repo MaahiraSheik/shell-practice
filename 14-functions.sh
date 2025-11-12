@@ -11,7 +11,7 @@ echo "your is running with root access"
 fi
 
 VALIDATE(){
-    if [ $1 -eq 0 ] then
+if [ $1 -eq 0 ] then
 echo "installing mysql $1....SUCCESS"
 else
 echo "Mysql not installed $2...FALURE"
@@ -29,22 +29,22 @@ else
 echo "mysql is already insatlalled..Nothing to do"
 fi
 
-dnf list installed Python3
-if [ $? -ne 0 ]
-then 
-echo " Python3 is not insatlled...going to insatll"
-dnf install Python3 -y
-VALIDATE $? "Python3"
-else
-echo "Python3 is already insatlalled..Nothing to do"
-fi
+# dnf list installed Python3
+# if [ $? -ne 0 ]
+# then 
+# echo " Python3 is not insatlled...going to insatll"
+# dnf install Python3 -y
+# VALIDATE $? "Python3"
+# else
+# echo "Python3 is already insatlalled..Nothing to do"
+# fi
 
-dnf list installed nginx
-if [ $? -ne 0 ]
-then 
-echo " nginx is not insatlled...going to insatll"
-dnf install mysql -y
-VALIDATE $? "nginx"
-else
-echo "nginx is already insatlalled..Nothing to do"
-fi
+# dnf list installed nginx
+# if [ $? -ne 0 ]
+# then 
+# echo " nginx is not insatlled...going to insatll"
+# dnf install mysql -y
+# VALIDATE $? "nginx"
+# else
+# echo "nginx is already insatlalled..Nothing to do"
+# fi
