@@ -11,7 +11,9 @@ echo "your is running with root access"
 fi
 
 VALIDATE(){
-if [ $1 -eq 0 ] then
+
+if [ $1 -eq 0 ] t
+then
 echo "installing mysql $2....SUCCESS"
 else
 echo "Mysql not installed $2...FALURE"
