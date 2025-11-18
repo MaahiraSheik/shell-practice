@@ -53,7 +53,7 @@ echo " python3 is not insatlled...going to insatll"
 dnf install python3 -y
 VALIDATE $? "python3"
 else
-echo "$Y Nothing to do Python3..already insatlalled. $N"
+echo -e "$Y Nothing to do Python3..already insatlalled. $N"
 fi
 
 dnf list installed nginx
@@ -63,5 +63,5 @@ echo " nginx is not insatlled...going to insatll"
 dnf install nginx -y
 VALIDATE $? "nginx"
 else
-echo "$Y Nothing to do Nginx.. already insatlalled. $N"
+echo -e "$Y Nothing to do Nginx.. already insatlalled. $N"
 fi
