@@ -16,14 +16,24 @@ else
 echo "your is running with root access"
 fi
 
+# VALIDATE(){
+# if [ $1 -eq 0 ]
+# then
+# echo -e "installing mysql....$G SUCCESS $N"
+# else
+# echo -e "Mysql not installed...$R FALURE $N"
+# exit 1
+# fi
+# }
+
 VALIDATE(){
-if [ $1 -eq 0 ]
-then
-echo -e "installing mysql....$G SUCCESS $N"
-else
-echo -e "Mysql not installed...$R FALURE $N"
-exit 1
-fi
+    if [ $1 -eq 0 ]; then
+    echo -e "$G SUCCESS: $2 installed $N"
+  else
+    echo -e "$R FAILURE: $2 not installed $N"
+    exit 1
+  fi
+
 }
 
 dnf list installed mysql
