@@ -2,9 +2,15 @@
 
 
 USERID=$(id -u)
+
+R="\e\31m"
+G="\e\32m"
+Y="\e\33m"
+N="\e\0m"
+ 
 if [ $USERID -ne 0 ]
 then
-echo "ERROR: please run with this root access"
+echo -e "$R ERROR: $Rplease run with this root access"
 exit 1
 else
 echo "your is running with root access"
@@ -13,9 +19,9 @@ fi
 VALIDATE(){
 if [ $1 -eq 0 ]
 then
-echo "installing mysql....SUCCESS"
+echo -e "installing mysql....$G SUCCESS $N"
 else
-echo "Mysql not installed...FALURE"
+echo -e "Mysql not installed...$R FALURE $N"
 exit 1
 fi
 }
@@ -27,7 +33,7 @@ echo " mysql is not insatlled...going to insatll"
 dnf install mysql -y
 VALIDATE $? "mysql"
 else
-echo "mysql is already insatlalled..Nothing to do"
+echo -e  "Nothing to do mysql.. $Y already insatlalled. $N"
 fi
 
 dnf list installed python3
@@ -37,7 +43,7 @@ echo " python3 is not insatlled...going to insatll"
 dnf install python3 -y
 VALIDATE $? "python3"
 else
-echo "python3 is already insatlalled..Nothing to do"
+echo "Nothing to do Python3..$Y already insatlalled. $N"
 fi
 
 dnf list installed nginx
@@ -47,5 +53,5 @@ echo " nginx is not insatlled...going to insatll"
 dnf install nginx -y
 VALIDATE $? "nginx"
 else
-echo "nginx is already insatlalled..Nothing to do"
+echo "$Y Nothing to do Nginx.. $Y already insatlalled. $N"
 fi
