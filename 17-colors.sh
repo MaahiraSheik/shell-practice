@@ -10,7 +10,7 @@ N="\e\0m"
  
 if [ $USERID -ne 0 ]
 then
-echo -e "$R ERROR: $Rplease run with this root access"
+echo -e "$R ERROR: $R please run with this root access $N"
 exit 1
 else
 echo "your is running with root access"
