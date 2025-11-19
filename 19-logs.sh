@@ -10,7 +10,7 @@ N="\e[0m"
 
 LOGS_FOLDER="/var/log/shellscript-logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
-LOG_FILE="$LOGS_FOLDER/$SCRIPT_NMAE.log"
+LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 mkdir -p $LOGS_FOLDER
 
 echo "script started executing at: $(date)" &>>$LOG_FILE
