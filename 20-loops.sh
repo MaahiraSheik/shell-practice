@@ -15,7 +15,7 @@ mkdir -p $LOGS_FOLDER
 
 echo "script started executing at: $(date)" &>>$LOG_FILE
 
-PACKAGES=("mysql" "nginx" "python3")
+
  
 if [ $USERID -ne 0 ]
 then
@@ -24,6 +24,8 @@ exit 1
 else
 echo "your is running with root access"  | tee -a $LOG_FILE
 fi
+
+PACKAGES=("mysql" "nginx" "python3")
 
 # VALIDATE(){
 # if [ $1 -eq 0 ]
