@@ -47,8 +47,8 @@ VALIDATE(){
 
 }
 
-for package in ${PACKAGES[@]}{
-
+for package in ${PACKAGES[@]}
+do
  dnf list installed $package  &>>$LOG_FILE
 if [ $? -ne 0 ]
 then 
@@ -59,4 +59,5 @@ else
 echo -e  "$Y Nothing to do $package.. already insatlalled. $N" | tee -a $LOG_FILE
 fi
 
-}
+done
+
